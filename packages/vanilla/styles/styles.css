@@ -1,0 +1,213 @@
+.fc-asset-card {
+  width: min(100%, 360px);
+  min-height: 320px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
+.fc-asset-card .flip-inner {
+  min-height: 320px;
+}
+
+.fc-asset-face {
+  display: flex;
+}
+
+.fc-asset-face-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.04), transparent 38%),
+    var(--fc-surface);
+}
+
+.fc-asset-back-shell {
+  background:
+    linear-gradient(180deg, rgb(79 140 255 / 0.08), transparent 30%),
+    var(--fc-back-bg, var(--fc-surface));
+}
+
+.fc-asset-header,
+.fc-asset-eyebrow-group,
+.fc-asset-inline-meta,
+.fc-asset-timeline-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.fc-asset-eyebrow {
+  color: var(--fc-text-dim);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fc-asset-headline {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.fc-asset-summary,
+.fc-asset-media-caption,
+.fc-asset-faq-answer,
+.fc-asset-profile-meta,
+.fc-asset-profile-role,
+.fc-asset-quote {
+  margin: 0;
+  color: var(--fc-text-dim);
+  line-height: 1.45;
+}
+
+.fc-asset-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.fc-asset-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.fc-asset-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--fc-border) 88%, transparent);
+  border-radius: calc(var(--fc-radius, 12px) - 4px);
+  background: color-mix(in srgb, var(--fc-bg) 72%, transparent);
+}
+
+.fc-asset-stat-label,
+.fc-asset-list-label {
+  color: var(--fc-text-dim);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.fc-asset-stat-value,
+.fc-asset-profile-name {
+  font-size: 1rem;
+}
+
+.fc-asset-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+
+.fc-asset-list-value {
+  margin: 0;
+}
+
+.fc-asset-bullets,
+.fc-asset-timeline,
+.fc-asset-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fc-asset-bullets {
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.fc-asset-timeline-item,
+.fc-asset-faq-item,
+.fc-asset-profile,
+.fc-asset-media {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--fc-border) 88%, transparent);
+  border-radius: calc(var(--fc-radius, 12px) - 4px);
+  background: color-mix(in srgb, var(--fc-bg) 78%, transparent);
+}
+
+.fc-asset-timeline-phase,
+.fc-asset-faq-question {
+  font-weight: 700;
+}
+
+.fc-tone-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.22rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--fc-border) 80%, transparent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.fc-tone-positive {
+  background: rgb(34 197 94 / 0.14);
+  color: #15803d;
+}
+
+.fc-tone-warning {
+  background: rgb(245 158 11 / 0.16);
+  color: #b45309;
+}
+
+.fc-tone-critical {
+  background: rgb(239 68 68 / 0.16);
+  color: #b91c1c;
+}
+
+.fc-tone-neutral {
+  background: color-mix(in srgb, var(--fc-bg) 78%, transparent);
+  color: inherit;
+}
+
+.fc-asset-code,
+.fc-asset-json {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow: auto;
+  padding: 0.9rem;
+  border-radius: calc(var(--fc-radius, 12px) - 4px);
+  border: 1px solid color-mix(in srgb, var(--fc-back-border, var(--fc-border)) 88%, transparent);
+  background: color-mix(in srgb, var(--fc-bg) 24%, transparent);
+  font-size: 0.78rem;
+}
+
+.fc-asset-json {
+  flex: 1;
+}
+
+@media (max-width: 720px) {
+  .fc-asset-card {
+    width: 100%;
+  }
+
+  .fc-asset-stats {
+    grid-template-columns: 1fr;
+  }
+}
