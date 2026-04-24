@@ -84,10 +84,12 @@ npm run build
 
 FlipCard is more than a component. It is the first primitive in a system where:
 
-- design systems can swap skins without rewriting manifests
-- schema can travel across frameworks and runtimes
-- workflow can bind independently from rendering
+- system design is abstracted from skins without rewriting manifests
+- schema can travel through frameworks and runtimes
+- workflow can bind independently from rendering and platform
 - entire surfaces can be composed from inspectable, portable UI cards
+- adaptive agent flashcards and semantic schema index
+- perfect for schema path pattern harvesting
 
 ## Contributing
 

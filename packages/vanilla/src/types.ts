@@ -9,7 +9,11 @@ export type FlipCardAssetCategory =
   | 'faq'
   | 'security'
   | 'media'
-  | 'metric';
+  | 'metric'
+  | 'chart'
+  | 'pattern'
+  | 'tile'
+  | 'portfolio';
 
 export type FlipCardAssetTheme = 'light' | 'dark' | 'midnight-sapphire';
 
@@ -72,6 +76,7 @@ export interface FlipCardAssetDesign {
   faq?: ReadonlyArray<FlipCardDesignFaqItem>;
   media?: FlipCardDesignMedia;
   quote?: string;
+  adaptiveCard?: Record<string, unknown>;
 }
 
 export interface FlipCardAssetManifest extends FlipCardManifest {

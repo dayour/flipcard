@@ -200,6 +200,26 @@ function syncState(element: HTMLElement, state: FlipState): void {
   element.setAttribute('aria-pressed', String(state === 'back'));
 }
 
+function syncFrontFaceHeight(element: HTMLElement, frontFaceShell: HTMLElement): void {
+  const updateHeight = () => {
+    element.style.setProperty('--fc-face-height', `${Math.max(frontFaceShell.scrollHeight, 320)}px`);
+  };
+
+  updateHeight();
+
+  const images = Array.from(frontFaceShell.querySelectorAll('img'));
+  for (const image of images) {
+    image.addEventListener('load', updateHeight);
+  }
+
+  if (typeof ResizeObserver === 'undefined') {
+    return;
+  }
+
+  const observer = new ResizeObserver(() => updateHeight());
+  observer.observe(frontFaceShell);
+}
+
 export function createFlipCardElement(
   asset: FlipCardAssetEntry,
   options: CreateFlipCardElementOptions = {},
@@ -212,6 +232,7 @@ export function createFlipCardElement(
   const inner = createElement('div', 'flip-inner');
   const front = createElement('div', 'flip-front fc-asset-face');
   const back = createElement('div', 'flip-back fc-asset-face');
+  const frontFaceShell = renderFrontFace(asset);
 
   element.type = 'button';
   element.setAttribute('aria-label', `${asset.title} flip card`);
@@ -219,10 +240,11 @@ export function createFlipCardElement(
     element.style.setProperty('--fc-accent', asset.accent);
   }
 
-  front.append(renderFrontFace(asset));
+  front.append(frontFaceShell);
   back.append(renderBackFace(asset));
   inner.append(front, back);
   element.append(inner);
+  syncFrontFaceHeight(element, frontFaceShell);
 
   syncState(element, controller.state);
   controller.subscribe((state) => syncState(element, state));

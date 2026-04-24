@@ -6,9 +6,9 @@ describe('flipCardAssetLibrary', () => {
   it('covers multiple catalog categories', () => {
     const grouped = groupFlipCardAssetsByCategory();
     expect(flipCardAssetLibrary.length).toBeGreaterThanOrEqual(8);
-    expect(grouped.kpi).toHaveLength(1);
-    expect(grouped.security).toHaveLength(1);
-    expect(grouped.media).toHaveLength(1);
+    expect(grouped.kpi.length).toBeGreaterThanOrEqual(1);
+    expect(grouped.security.length).toBeGreaterThanOrEqual(1);
+    expect(grouped.media.length).toBeGreaterThanOrEqual(1);
   });
 
   it('creates a flippable DOM element for vanilla hosts', () => {
