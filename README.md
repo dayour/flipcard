@@ -8,8 +8,8 @@
 
 FlipCard decouples **design ⟂ schema ⟂ workflow**. The front face renders the design; the back face exposes the manifest schema; a click flips between them. Every card is described by a portable JSON manifest validated against a public schema, rendered by your framework of choice (React, vanilla web component, server-side), themed with shared design tokens, and authorable by humans or LLMs through an MCP server.
 
-- **Documentation site:** <https://microsoft.github.io/flipcard/docs/>
-- **Live showcase:** <https://microsoft.github.io/flipcard/>
+- **Documentation site:** <https://microsoft.github.io/flipcard/>
+- **Live showcase:** <https://microsoft.github.io/flipcard/showcase/>
 - **Storybook:** <https://microsoft.github.io/flipcard/storybook/>
 - **Manifest schema:** <https://microsoft.github.io/flipcard/schema/v0.1.json>
 
@@ -106,7 +106,7 @@ npx @microsoft/flipcard-mcp
 
 Tools exposed: `list_categories`, `get_schema`, `validate_manifest`, `generate_manifest`, `describe_component`.
 
-See [Docs → MCP server](https://microsoft.github.io/flipcard/docs/packages/mcp-server) for full client-configuration examples.
+See [Docs → MCP server](https://microsoft.github.io/flipcard/packages/mcp-server) for full client-configuration examples.
 
 ## Repository layout
 
@@ -175,7 +175,7 @@ cd docs && npm install && npm start
 
 ## Documentation
 
-Full documentation lives in [`docs/`](docs) and is published to GitHub Pages at <https://microsoft.github.io/flipcard/docs/>.
+Full documentation lives in [`docs/`](docs) and is published to GitHub Pages at <https://microsoft.github.io/flipcard/>.
 
 - **Introduction** — what FlipCard is and why
 - **Getting started** — install and render your first card

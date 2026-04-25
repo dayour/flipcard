@@ -58,8 +58,9 @@ FlipCard is a small, layered system. The same manifest flows through every layer
 - **Storybook** runs against the React package (`.storybook/`).
 - **Docs** are this Docusaurus site at `docs/`.
 - **GitHub Pages** deploys via `.github/workflows/deploy.yml`:
-  - `/` — the showcase
+  - `/` — this documentation site
+  - `/showcase/` — the showcase
   - `/storybook/` — the static Storybook bundle
-  - `/docs/` — this documentation site
+  - `/schema/v0.1.json` — the published manifest schema
 
 The same manifest, validated by the same schema, is what every layer agrees on. That is the point of the system.

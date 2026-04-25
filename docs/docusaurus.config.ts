@@ -14,16 +14,20 @@ const config: Config = {
   },
 
   url: 'https://microsoft.github.io',
-  // When deployed under microsoft.github.io/flipcard/docs/ via the showcase
-  // workflow, the docs site sits at /flipcard/docs/. Locally it serves at /.
-  baseUrl: githubPages ? '/flipcard/docs/' : '/',
+  // GitHub Pages publishes the wiki at microsoft.github.io/flipcard/.
+  // Locally the site still serves from /.
+  baseUrl: githubPages ? '/flipcard/' : '/',
 
   organizationName: 'microsoft',
   projectName: 'flipcard',
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   i18n: {
     defaultLocale: 'en',
@@ -66,7 +70,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://microsoft.github.io/flipcard/',
+          href: 'https://microsoft.github.io/flipcard/showcase/',
           label: 'Showcase',
           position: 'left',
         },
@@ -106,7 +110,7 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            { label: 'Showcase', href: 'https://microsoft.github.io/flipcard/' },
+            { label: 'Showcase', href: 'https://microsoft.github.io/flipcard/showcase/' },
             { label: 'Storybook', href: 'https://microsoft.github.io/flipcard/storybook/' },
             { label: 'GitHub', href: 'https://github.com/microsoft/flipcard' },
           ],

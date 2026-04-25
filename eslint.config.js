@@ -10,6 +10,9 @@ export default [
   {
     ignores: [
       '**/dist/**',
+      '**/build/**',
+      '**/.docusaurus/**',
+      '**/_site/**',
       '**/node_modules/**',
       '**/storybook-static/**',
       '**/*.d.ts',
@@ -17,6 +20,12 @@ export default [
     ],
   },
   js.configs.recommended,
+  {
+    files: ['**/*.{js,mjs,cjs}'],
+    languageOptions: {
+      globals: { ...globals.node },
+    },
+  },
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -39,6 +48,7 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
+      'no-undef': 'off',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
     },
