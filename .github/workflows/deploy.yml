@@ -30,12 +30,21 @@ jobs:
         env:
           GITHUB_PAGES: 'true'
       - run: npm run build:storybook
+      - name: Build documentation site
+        working-directory: docs
+        env:
+          GITHUB_PAGES: 'true'
+        run: |
+          npm ci
+          npm run build
       - name: Compose deploy site
         run: |
           mkdir -p _site
           cp -r apps/showcase/dist/* _site/
           mkdir -p _site/storybook
           cp -r storybook-static/* _site/storybook/
+          mkdir -p _site/docs
+          cp -r docs/build/* _site/docs/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
