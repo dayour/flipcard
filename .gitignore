@@ -6,6 +6,8 @@ dist
 build
 out
 storybook-static
+.docusaurus
+_site
 *.tsbuildinfo
 
 # Caches
