@@ -85,4 +85,4 @@ import type {
 
 - **[`@microsoft/flipcard-core`](./core)** — types and controller.
 - **[Categories & themes](../guides/categories-and-themes)** — preset reference.
-- The Flipdeck bundle published at [microsoft.github.io/flipcard/flipdeck](https://microsoft.github.io/flipcard/flipdeck/).
+- The interactive **FlipDeck** gallery published at [microsoft.github.io/flipcard/flipdeck](https://microsoft.github.io/flipcard/flipdeck/).

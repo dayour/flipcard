@@ -1,6 +1,6 @@
 /**
  * Design tokens that mirror the CSS custom properties shipped in
- * `styles/*.css`. Use these for CSS-in-JS, flipdeck decks, or design-tool
+ * `styles/*.css`. Use these for CSS-in-JS, gallery pages, or design-tool
  * exports.
  */
 

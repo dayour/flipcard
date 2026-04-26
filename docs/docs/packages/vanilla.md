@@ -66,7 +66,7 @@ const tealCards = getFlipCardAssetsByCategory('teal');
 const grouped = groupFlipCardAssetsByCategory();
 ```
 
-Useful for showcase pages, Flipdeck, and auto‑generated catalog grids.
+Useful for showcase pages, the FlipDeck gallery, and auto‑generated catalog grids.
 
 ## Render helpers (server / non‑custom‑element)
 

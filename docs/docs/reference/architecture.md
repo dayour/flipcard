@@ -54,13 +54,12 @@ FlipCard is a small, layered system. The same manifest flows through every layer
 ## Build & deploy pipeline
 
 - **Library builds** use [`tsup`](https://tsup.egoist.dev/) per package.
-- **Showcase** is a Vite + React app at `apps/showcase`.
-- **Flipdeck** runs against the React package (`.flipdeck/`) — the deck-of-cards browser for interactive component examples.
+- **FlipDeck** is a Vite + React gallery at `apps/showcase` that dogfoods `FlipCardCatalog` and the `flipCardAssetLibrary`.
 - **Docs** are this Docusaurus site at `docs/`.
 - **GitHub Pages** deploys via `.github/workflows/deploy.yml`:
   - `/` — this documentation site
-  - `/showcase/` — the showcase
-  - `/flipdeck/` — the static Flipdeck bundle
+  - `/flipdeck/` — the FlipDeck gallery (canonical URL)
+  - `/showcase/` — the same FlipDeck build, kept for backward compatibility
   - `/schema/v0.1.json` — the published manifest schema
 
 The same manifest, validated by the same schema, is what every layer agrees on. That is the point of the system.

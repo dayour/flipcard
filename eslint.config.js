@@ -14,7 +14,6 @@ export default [
       '**/.docusaurus/**',
       '**/_site/**',
       '**/node_modules/**',
-      '**/flipdeck-static/**',
       '**/*.d.ts',
       '**/coverage/**',
     ],

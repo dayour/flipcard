@@ -70,13 +70,8 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://microsoft.github.io/flipcard/showcase/',
-          label: 'Showcase',
-          position: 'left',
-        },
-        {
           href: 'https://microsoft.github.io/flipcard/flipdeck/',
-          label: 'Flipdeck',
+          label: 'FlipDeck',
           position: 'left',
         },
         {
@@ -110,8 +105,7 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            { label: 'Showcase', href: 'https://microsoft.github.io/flipcard/showcase/' },
-            { label: 'Flipdeck', href: 'https://microsoft.github.io/flipcard/flipdeck/' },
+            { label: 'FlipDeck', href: 'https://microsoft.github.io/flipcard/flipdeck/' },
             { label: 'GitHub', href: 'https://github.com/microsoft/flipcard' },
           ],
         },
