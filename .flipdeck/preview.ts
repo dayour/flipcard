@@ -1,4 +1,4 @@
-import type { Preview } from '@storybook/react';
+import type { Preview } from '@flipdeck/react';
 import '@microsoft/flipcard-themes/base.css';
 import '@microsoft/flipcard-themes/light.css';
 import '@microsoft/flipcard-themes/dark.css';

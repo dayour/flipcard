@@ -66,7 +66,7 @@ const tealCards = getFlipCardAssetsByCategory('teal');
 const grouped = groupFlipCardAssetsByCategory();
 ```
 
-Useful for showcase pages, Storybook, and auto‑generated catalog grids.
+Useful for showcase pages, flipbook, and auto‑generated catalog grids.
 
 ## Render helpers (server / non‑custom‑element)
 

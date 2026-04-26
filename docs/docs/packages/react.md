@@ -85,4 +85,4 @@ import type {
 
 - **[`@microsoft/flipcard-core`](./core)** — types and controller.
 - **[Categories & themes](../guides/categories-and-themes)** — preset reference.
-- The Storybook bundle published at [microsoft.github.io/flipcard/storybook](https://microsoft.github.io/flipcard/storybook/).
+- The flipbook bundle published at [microsoft.github.io/flipcard/flipbook](https://microsoft.github.io/flipcard/flipbook/).

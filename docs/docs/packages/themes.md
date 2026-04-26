@@ -5,7 +5,7 @@ title: '@microsoft/flipcard-themes'
 
 # `@microsoft/flipcard-themes`
 
-Shared design tokens for every FlipCard renderer. Ships TypeScript token objects you can consume from CSS‑in‑JS, design tools, or Storybook docs, plus the underlying CSS custom properties that power the renderers' default styling.
+Shared design tokens for every FlipCard renderer. Ships TypeScript token objects you can consume from CSS‑in‑JS, design tools, or flipbook docs, plus the underlying CSS custom properties that power the renderers' default styling.
 
 ## Install
 
